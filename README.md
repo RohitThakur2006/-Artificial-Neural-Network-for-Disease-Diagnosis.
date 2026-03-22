@@ -22,7 +22,7 @@ This project is ready to deploy on Railway with:
 
 ### Optional environment variables
 
-- `WORKERS`: Number of Gunicorn workers (default is `2` from `Procfile`).
+- `WORKERS`: Number of Gunicorn workers (the `Procfile` start command defaults to `2` when this is not set).
 
 ### Troubleshooting
 
