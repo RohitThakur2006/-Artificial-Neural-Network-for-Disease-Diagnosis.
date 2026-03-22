@@ -17,6 +17,7 @@ This project is ready to deploy on Railway with:
 6. In your service settings, ensure these values are used:
    - **Start Command**: `gunicorn app:app --bind 0.0.0.0:$PORT --workers ${WORKERS:-2}`
    - **Python Version**: `3.11` (already set by `runtime.txt`)
+   - `PORT` is injected automatically by Railway, so you do not need to set it manually.
 7. Deploy the service.
 8. Open the generated Railway domain URL to use the app.
 
