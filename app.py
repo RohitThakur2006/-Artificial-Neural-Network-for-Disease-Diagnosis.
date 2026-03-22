@@ -1,6 +1,7 @@
 from flask import Flask, request, render_template
 import numpy as np
 import pickle
+import os
 from sklearn.metrics.pairwise import cosine_similarity
 from sentence_transformers import SentenceTransformer
 
@@ -57,4 +58,4 @@ def predict():
     return render_template('index.html', prediction_text=prediction_text, bmi_text=bmi_text)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)), debug=False)
